@@ -115,6 +115,7 @@ CREATE TABLE bikecapstore.order_items (
 	item_id INT,
 	product_id INT NOT NULL,
 	quantity INT NOT NULL,
+	list_price DECIMAL (10, 2) NOT NULL,
 	discount DECIMAL (4, 2) NOT NULL DEFAULT 0,
 	PRIMARY KEY (order_id, item_id),
 	FOREIGN KEY (order_id) REFERENCES bikecapstore.orders (order_id) ON DELETE RESTRICT ON UPDATE CASCADE,
